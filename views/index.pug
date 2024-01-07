@@ -1,0 +1,15 @@
+extends layout.pug
+
+block head 
+    title ayden.is
+
+block content 
+    .content
+        h1 ayden.is
+
+        if error
+            p.error #[strong= error]
+
+        form(method='post')
+            input(type='text', name='description', placeholder='???', value=description, required)
+            input(type='submit', value='Submit')

@@ -1,0 +1,45 @@
+html
+  head
+    block head
+
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="robots", content="noindex")
+
+    style.
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        form {
+            margin-top: 20px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        body > * {
+            flex-grow: 1;
+        }
+
+        .footer {
+            flex-grow: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container h1.him {
+            font-size: 10vw;
+        }
+  body
+    block content
+
+    p.footer: small: a(href='/') ayden.is
