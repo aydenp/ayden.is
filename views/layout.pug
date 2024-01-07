@@ -42,4 +42,6 @@ html
   body
     block content
 
-    p.footer: small: a(href='/') ayden.is
+    p.footer: small
+        a(href='/') ayden.is
+        | #{url || ''}

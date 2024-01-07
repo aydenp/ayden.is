@@ -16,7 +16,7 @@ app.post('/', (req, res) => {
 
 app.get('/:path(*)', (req, res) => {
     const description = decodeURIComponent(req.url.trimStart("/").replace(/(\+|\/)/g, " ")).trim();
-    if (description.length > 0) res.render("desc", { description });
+    if (description.length > 0) res.render("desc", { description, url: req.url });
     else res.redirect("/");
 });
 
